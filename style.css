@@ -1,0 +1,251 @@
+:root {
+  --bg: #f7f7f7;
+  --navy: #1c2e4a;
+  --blue: #3270a3;
+  --ink: #000000;
+  --line: #d4d4d4;
+  --font-head: "Urbanist", "Montserrat", Arial, sans-serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.icon {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- NAVBAR ---------- */
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  height: clamp(4.5rem, 10.5vw, 8rem);
+}
+
+.nav {
+  width: 63%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 6%;
+  /* sisi kiri berbentuk panah / potongan */
+  clip-path: polygon(0 50%, 8.3% 0, 100% 0, 100% 100%, 8.3% 100%);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: clamp(0.75rem, 2.6vw, 2.5rem);
+}
+
+.nav a {
+  font-weight: 700;
+  font-size: clamp(0.7rem, 1.9vw, 1.5rem);
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.nav a::before {
+  content: "";
+  width: 0.45em;
+  height: 0.45em;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.nav a:hover,
+.nav a:focus-visible { opacity: 0.75; }
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: clamp(1rem, 3vw, 2.5rem) 3% clamp(2rem, 6vw, 4.5rem);
+  border-bottom: 5px solid var(--line);
+}
+
+.hero-text { max-width: 58%; }
+
+.hello {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(3rem, 8.5vw, 7rem);
+  line-height: 1.1;
+}
+
+.role {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.6vw, 3rem);
+  line-height: 1.45;
+  margin: 0.4rem 0 1.5rem;
+}
+
+.bio {
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(0.95rem, 1.75vw, 1.5rem);
+  line-height: 1.65;
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+  width: clamp(10rem, 23.7vw, 20rem);
+  aspect-ratio: 532 / 618;
+  margin-right: 3%;
+  background: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  /* bentuk segi enam */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hero-photo span {
+  font-weight: 800;
+  font-size: clamp(0.9rem, 1.9vw, 1.5rem);
+  letter-spacing: 0.08em;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem) 3%;
+}
+
+.btn-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: var(--blue);
+  padding: 0.9rem 2.5rem 0.9rem 1.6rem;
+  border-radius: 1.2rem;
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: clamp(1rem, 2.2vw, 1.8rem);
+  letter-spacing: 0.04em;
+  transition: filter 0.2s;
+}
+
+.btn-contact .icon {
+  font-size: 2.3em;
+  stroke-width: 1.3;
+}
+
+.btn-contact:hover,
+.btn-contact:focus-visible { filter: brightness(1.1); }
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.4vw, 1.4rem);
+}
+
+.social p {
+  font-weight: 800;
+  font-size: clamp(0.9rem, 2.1vw, 1.75rem);
+  margin-right: clamp(0.5rem, 1.5vw, 1.5rem);
+  white-space: nowrap;
+}
+
+.social-icon {
+  width: clamp(2.8rem, 5.6vw, 4.7rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--blue);
+  display: grid;
+  place-items: center;
+  font-size: clamp(1.6rem, 3.4vw, 2.9rem);
+  transition: transform 0.2s;
+}
+
+.social-icon:hover,
+.social-icon:focus-visible { transform: scale(1.08); }
+
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: clamp(1.2rem, 3.5vw, 2.5rem) 3.3%;
+}
+
+.footer-title {
+  font-weight: 800;
+  font-size: clamp(1.3rem, 4vw, 3.4rem);
+  letter-spacing: -0.03em;
+}
+
+.footer-email {
+  font-weight: 500;
+  font-size: clamp(0.8rem, 2.3vw, 2rem);
+}
+
+.footer-email a:hover { text-decoration: underline; }
+
+/* ---------- RESPONSIF (HP) ---------- */
+@media (max-width: 700px) {
+  .nav {
+    width: 100%;
+    padding-left: 0;
+    clip-path: none;
+  }
+
+  .nav ul { gap: 0.6rem; }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text { max-width: 100%; }
+  .hero-photo { margin-right: 0; }
+
+  .contact {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing Page | Software Engineering Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ikon SVG (dipakai berulang) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      <path transform="translate(6.5 6.5) scale(0.45)" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </symbol>
+  </svg>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Menu utama">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#address">Address</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-text" id="about">
+        <h1 class="hello">Hello</h1>
+        <h2 class="role">I AM A SOFTWARE<br>ENGINEERING STUDENT</h2>
+        <p class="bio">
+          I am a fifth-semester software engineering student at Medan Area
+          University, North Sumatra. I am currently learning to develop my
+          knowledge about software, and this is my landing page on my GitHub
+          account, which serves as a tool for me to develop this knowledge.
+        </p>
+      </div>
+
+      <!-- Ganti teks "PHOTO" dengan: <img src="fotomu.jpg" alt="Foto saya"> -->
+      <div class="hero-photo">
+        <span><img src="fotowajahlandingpage.jpg" alt="Foto Saya"></span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="service">
+      <a class="btn-contact" href="https://wa.me/628xxxxxxxxxx" target="_blank" rel="noopener">
+        <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+        <span>CONTACT ME</span>
+      </a>
+
+      <div class="social" id="portfolio">
+        <p>CHECK OUT MY</p>
+        <a class="social-icon" href="https://wa.me/628xxxxxxxxxx" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+        </a>
+        <a class="social-icon" href="https://instagram.com/username" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="address">
+    <strong class="footer-title">WEBSITE DEVELOPER</strong>
+    <p class="footer-email">email : <a href="mailto:evanpakpahan3@gmail.com">evanpakpahan3@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
